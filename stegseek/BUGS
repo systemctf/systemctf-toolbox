@@ -1,0 +1,5 @@
+
+* .au mu-law audio data is treated as linear 8 bit unsigned value in the neighbourhood relation (with radius 1).
+  The neighbourhood relation should be defined with respect to the logarithmic nature of mu-law data.
+
+If you find a bug, please open an issue on the Github page.

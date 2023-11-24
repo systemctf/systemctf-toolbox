@@ -1,0 +1,27 @@
+[submodule "volatility"]
+	path = volatility
+	url = https://github.com/volatilityfoundation/volatility.git
+[submodule "stegseek"]
+	path = stegseek
+	url = https://github.com/RickdeJager/stegseek
+[submodule "wordlistctl"]
+	path = wordlistctl
+	url = https://github.com/BlackArch/wordlistctl
+[submodule "hash_extender"]
+	path = hash_extender
+	url = https://github.com/iagox86/hash_extender
+[submodule "bruteforce-luks"]
+	path = bruteforce-luks
+	url = https://github.com/glv2/bruteforce-luks
+[submodule "rsa-wiener-attack"]
+	path = rsa-wiener-attack
+	url = https://github.com/pablocelayes/rsa-wiener-attack
+[submodule "RSA-Common-Modulus-Attack"]
+	path = RSA-Common-Modulus-Attack
+	url = https://github.com/HexPandaa/RSA-Common-Modulus-Attack
+[submodule "jwtbrute"]
+	path = jwtbrute
+	url = https://github.com/jmaxxz/jwtbrute
+[submodule "juggfind"]
+	path = juggfind
+	url = https://github.com/3C4D/juggfind

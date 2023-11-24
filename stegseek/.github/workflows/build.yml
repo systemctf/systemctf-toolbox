@@ -1,0 +1,36 @@
+name: Build and Test
+
+on:
+  push:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install build dependencies
+      run: sudo apt install -y libmhash-dev libmcrypt-dev libjpeg-dev zlib1g-dev build-essential cmake
+    - name: Compile project
+      run: |
+              mkdir -p build
+              cd build
+              cmake -DCMAKE_BUILD_TYPE=Release ..
+              make -j2
+    - name: Run unit tests
+      run: cd build && make test
+    - name: Run (legacy) system tests
+      run: cd tests/steghide && ./systemtests.pl
+
+    - name: Run cracker tests
+      run: cd tests/stegseek && python3.8 test.py
+
+    - name: Create a .deb package
+      run: bash package/package.sh
+    - name: Save the .deb as a build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: stegseek-deb-package
+        path: stegseek*.deb
