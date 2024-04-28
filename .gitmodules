@@ -25,3 +25,6 @@
 [submodule "juggfind"]
 	path = juggfind
 	url = https://github.com/3C4D/juggfind
+[submodule "blackbird"]
+  path = blackbird
+  url = https://github.com/p1ngul1n0/blackbird
